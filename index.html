@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login Pages</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"
+    />
+  </head>
+  <body>
+    <div class="main">
+      
+      <div class="first-main">
+        <div class="first-main-content">
+          <button class="btn-manual">User Manual</button>
+          <div class="link">
+            <a
+              class="link-sidebar facebook"
+              href="https://www.facebook.com/yourprofile"
+              target="_blank"
+            >
+              <img
+                src="./assets//images/facebook-img.png"
+                alt="Facebook"
+                class="social-icon"
+              />
+            </a>
+            <a
+              class="link-sidebar twitter"
+              href="https://www.twitter.com"
+              target="_blank"
+            >
+              <img
+                src="./assets/images/twitter.png"
+                alt="Twitter"
+                class="social-icon"
+              />
+            </a>
+            <a
+              class="link-sidebar youtube"
+              href="https://www.youtube.com"
+              target="_blank"
+            >
+              <img
+                src="./assets/images/youtube.png"
+                alt="YouTube"
+                class="social-icon"
+              />
+            </a>
+            <a
+              class="link-sidebar insta"
+              href="https://www.instagram.com"
+              target="_blank"
+            >
+              <img
+                src="./assets/images/insta.png"
+                alt="Instagram"
+                class="social-icon"
+              />
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="crousel-content">
+      
+          <div class="carousel">
+            <div><img height="14" src="./assets/images/facebook-img.png" alt="Slide 1" /></div>
+            <div><img height="59" src="./assets/images/twitter.png" alt="Slide 2" /></div>
+            <div><img height="56" src="./assets/images/insta.png" alt="Slide 3" /></div>
+            <!-- Add as many slides as needed -->
+        
+        </div>
+      </div>
+      <div class="second-main">
+        <div class="login-section">
+          <section class="logo-container">
+            <img
+              src="https://edunext2-storage-cf.edunexttechnologies.com/1615023184521_images.jpg"
+              width="17"
+              alt="Logo"
+              class="logo"
+            />
+            <h1>N.H. GOEL WORLD SCHOOL</h1>
+          </section>
+          <div class="para-section">
+            <div>Login To your Account</div>
+            <p class="welcome">Welcome Back, Please Login To your Account</p>
+          </div>
+          <div class="form-section">
+            <label>User Id</label>
+            <input type="text" />
+            <label>Password</label>
+            <input type="password" />
+          </div>
+          <div class="forget-paasword">Forget Password?</div>
+          <button class="btn" type="submit">Login</button>
+          <div class="bottom-logo">
+            <img
+              class="img-google"
+              src="./assets/images/googlePlay.png"
+              alt="Google Play Store"
+            />
+            <img
+              class="img-apple"
+              src="./assets/images/appStore.png"
+              alt="Apple App Store"
+            />
+          </div>
+          <div class="footer-para">
+            <span>CBSE School code: 15175</span>
+            <div>School Code For Mobile App: <b>17007</b></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+   
+    <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script>
+      $(document).ready(function () {
+        function initializeCarousel() {
+          if ($(window).width() >= 703) {
+            if (!$(".carousel").hasClass("slick-initialized")) {
+              $(".carousel").slick({
+                dots: false,
+                arrows: false,
+                infinite: true,
+                speed: 500,
+                slidesToShow: 1,
+                slidesToScroll: 1,
+                autoplay: true, 
+                autoplaySpeed: 2000, 
+              });
+            }
+          } else {
+            if ($(".carousel").hasClass("slick-initialized")) {
+              $(".carousel").slick("unslick");
+            }
+          }
+        }
+
+       
+        initializeCarousel();
+
+        $(window).on("resize", function () {
+          initializeCarousel();
+        });
+      });
+    </script>
+  </body>
+</html>
